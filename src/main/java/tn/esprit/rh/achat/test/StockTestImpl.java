@@ -18,7 +18,7 @@ import static org.junit.Assert.*;
 @RunWith(SpringRunner.class)
 @Slf4j
 @SpringBootTest
-public class stockTestImpl {
+public class StockTestImpl {
 
     @Autowired
     IStockService stockService;
@@ -39,7 +39,7 @@ public class stockTestImpl {
     }
 
     @Test
-    public  void testUpdateStock()  throws Exception {
+    public  void testUpdateStock()  {
         List<Stock> stocks = stockService.retrieveAllStocks();
         if (stocks.isEmpty())
         {
