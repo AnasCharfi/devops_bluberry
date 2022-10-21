@@ -1,6 +1,5 @@
 package tn.esprit.rh.achat.controllers;
-
-
+import org.modelmapper.ModelMapper;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +14,7 @@ import java.util.List;
 @RequestMapping("/stock")
 @CrossOrigin("*")
 public class StockRestController {
+
 
 	@Autowired
 	IStockService stockService;
@@ -53,8 +53,10 @@ public class StockRestController {
 
 	@PutMapping("/modify-stock")
 	@ResponseBody
-	public Stock modifyStock(@RequestBody Stock stock) {
-		return stockService.updateStock(stock);
+	public Stock modifyStock(@RequestBody StockModel stock) {
+		ModelMapper modelMapper= new ModelMapper() ;
+		Stock postRequest = modelMapper.map(stock, Stock.class);
+		return stockService.updateStock(postRequest);
 	}
 
 

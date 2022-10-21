@@ -38,9 +38,9 @@ public class Stock implements Serializable {
 	}
 	public Stock(StockModel s) {
 		super();
-		System.out.println("helooooo" + s.libelleStock);
 		this.libelleStock = s.libelleStock ;
 		this.qte = s.qte;
 		this.qteMin =  s.qteMin;
 	}
+
 }
