@@ -1,22 +1,22 @@
 package tn.esprit.rh.achat.test;
-import org.junit.Assert;
+import lombok.extern.slf4j.Slf4j;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
+
 import tn.esprit.rh.achat.entities.Stock;
 import tn.esprit.rh.achat.services.IStockService;
-
-import java.util.Collections;
 import java.util.List;
 
 import static org.junit.Assert.*;
 
 
 @RunWith(SpringRunner.class)
+@Slf4j
 @SpringBootTest
 public class stockTestImpl {
 
@@ -27,12 +27,13 @@ public class stockTestImpl {
     public  void testAddStock(){
         List<Stock> stocks = stockService.retrieveAllStocks();
         int expected=stocks.size();
+        int x= expected+1 ;
         Stock s = new Stock();
         s.setLibelleStock("stock test");
         s.setQte(10);
         s.setQteMin(100);
         Stock savedStock= stockService.addStock(s);
-        assertEquals(expected+1, stockService.retrieveAllStocks().size());
+        assertEquals(x, stockService.retrieveAllStocks().size());
         assertNotNull(savedStock.getLibelleStock());
         stockService.deleteStock(savedStock.getIdStock());
     }
@@ -42,7 +43,7 @@ public class stockTestImpl {
         List<Stock> stocks = stockService.retrieveAllStocks();
         if (stocks.isEmpty())
         {
-            System.out.println("Fct test update stock : Stock Vide");
+            log.info("Fct test update stock : Stock Vide");
             return ;
         }
         Stock old= stocks.get(0) ;
@@ -64,12 +65,13 @@ public class stockTestImpl {
         List<Stock> stocks = stockService.retrieveAllStocks();
         if(stocks.isEmpty())
         {
-            System.out.println("Fct test Delete stock : Stock Vide");
+            log.info("Fct test Delete stock : Stock Vide");
             return ;
         }
         int expected=stocks.size();
-        Stock s = stockService.retrieveStock((long)22);
+        int x= expected-1 ;
+        Stock s = stocks.get(0);
         stockService.deleteStock(s.getIdStock());
-        assertEquals(expected-1, stockService.retrieveAllStocks().size());
+        assertEquals(x, stockService.retrieveAllStocks().size());
     }
 }
