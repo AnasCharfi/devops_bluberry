@@ -35,7 +35,7 @@ public class StockTestImpl {
         Stock savedStock= stockService.addStock(s);
         assertEquals(x, stockService.retrieveAllStocks().size());
         assertNotNull(savedStock.getLibelleStock());
-       // stockService.deleteStock(savedStock.getIdStock());
+
     }
 
     @Test
@@ -83,7 +83,7 @@ public class StockTestImpl {
         if(stocks.isEmpty())
         {
             log.info("Fct test Delete stock : Stock Vide");
-            return ;
+          
         }else {
             log.info(stockService.retrieveStatusStock());
         }
