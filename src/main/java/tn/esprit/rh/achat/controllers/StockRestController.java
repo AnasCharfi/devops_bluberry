@@ -37,7 +37,9 @@ public class StockRestController {
 	@PostMapping("/add-stock")
 	@ResponseBody
 	public Stock addStock(@RequestBody Stock s) {
-		return stockService.addStock(s);
+		Stock s1 = new Stock() ;
+		s1=s ;
+		return stockService.addStock(s1);
 
 	}
 

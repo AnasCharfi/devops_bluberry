@@ -83,7 +83,7 @@ public class StockTestImpl {
         if(stocks.isEmpty())
         {
             log.info("Fct test Delete stock : Stock Vide");
-          
+
         }else {
             log.info(stockService.retrieveStatusStock());
         }
