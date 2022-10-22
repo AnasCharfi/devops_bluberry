@@ -40,12 +40,23 @@ public class Facture implements Serializable {
 	private Boolean archivee;
 	@OneToMany(mappedBy = "facture")
 	private Set<DetailFacture> detailsFacture;
-    @ManyToOne
-    @JsonIgnore
-    private Fournisseur fournisseur;
-    @OneToMany(mappedBy="facture")
-    @JsonIgnore
-    private Set<Reglement> reglements;
+	@ManyToOne
+	@JsonIgnore
+	private Fournisseur fournisseur;
+	@OneToMany(mappedBy = "facture")
+	@JsonIgnore
+	private Set<Reglement> reglements;
 
-	
+	public Facture(FactureModel fm) {
+		super();
+		this.idFacture = fm.getIdFacture();
+		this.montantFacture = fm.getMontantFacture();
+		this.montantRemise = fm.getMontantRemise();
+		this.dateCreationFacture = fm.getDateCreationFacture();
+		this.dateDerniereModificationFacture = fm.getDateDerniereModificationFacture();
+		this.archivee = fm.getArchivee();
+		this.detailsFacture = fm.getDetailsFacture();
+		this.fournisseur = fm.getFournisseur();
+		this.reglements = fm.getReglements();
+	}
 }
