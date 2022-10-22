@@ -1,6 +1,6 @@
 package tn.esprit.rh.achat.services;
 
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
@@ -80,7 +80,7 @@ public class FactureServiceImpl implements IFactureService {
 			try {
 				return (List<Facture>)  fournisseur;
 		} catch (Exception e) {
-			return null;
+			return Collections.emptyList();
 		}
 	}
 

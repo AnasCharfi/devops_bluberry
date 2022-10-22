@@ -11,7 +11,7 @@
     </li>
     <li>Get to know your <strong>ip address</strong> in <em>vagrant</em>: 
         <ul>
-            <li><strong>ip addr sho</strong></li>
+            <li><strong>ip addr show</strong></li>
             <li><strong>copy and paste it in the browser you'll need it, we'll call it ### for the rest of the guide</strong><em> #mandatory</em></li>
         </ul>
     </li>   
@@ -24,7 +24,7 @@
     </li>   
     <li>Start <strong>Sonar</strong> in <em>vagrant</em> on <em>Docker</em>: 
         <ul>
-            <li><strong>docker run -p 9000:9000 sonarqube:8.9.7-community</strong><em> #It will take some time don't worry</em></li>
+            <li><strong>docker run -p 9000:9000 sonarqube:8.9.7-community</strong><br><em> #It will take some time don't worry <br>#Also we're using this specific version because the last version isn't really stable</em></li>
             <li><strong>now open your browser, type in ###:9000</strong></li>
         </ul>
     </li>    
