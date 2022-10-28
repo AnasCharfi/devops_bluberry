@@ -48,7 +48,7 @@
 
 ##### I hope that this guide will be helpfull and if you needed any sort of help!
 
-- 💼 Do reach by [email](mailto:charfianas1@gmail.com) :)
+- 💼 Do reach by [email](mailto:charfianas1@gmail.com) 😀
 - 📞 or by Whatsapp [+21653072794](https://api.whatsapp.com/send?phone=21653072794&text=Hello%20from%20Anas%20Charfi%20website!)
 - 💬 ask me about anything, I'm always happy to help
 
