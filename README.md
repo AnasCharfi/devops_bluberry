@@ -33,7 +33,7 @@
             <li><strong>docker run -d -p 8081:8081 sonatype/nexus3</strong><br><em> #It will take some time (quiet much) don't worry</em></li>
             <li><strong>now open your browser, type in ###:8081</strong>
             </li>
-            <li><strong>docker exec -i  cat /nexus-data/admin.password</strong><em> #Now get the password by typing this command</em><br><em>#Sometimes nexus doesn't and sonar doesn't save the new password that's why this message exists</em></li>
+            <li><strong>docker exec -i  cat /nexus-data/admin.password</strong><em> #Now get the password by typing this command</em><br><em>#Sometimes nexus and sonar doesn't save the new password that's why this message exists</em></li>
         </ul>
     </li>    
 
