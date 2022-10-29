@@ -47,9 +47,9 @@ public class Produit implements Serializable {
 	@ManyToOne
 	@JsonIgnore
 	private CategorieProduit categorieProduit;
-	
 
 
-	
-
+    public void setStock(Stock stock) {
+        this.stock = stock;
+    }
 }
