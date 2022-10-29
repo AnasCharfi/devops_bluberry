@@ -9,7 +9,7 @@ public interface ICategorieProduitService {
 
 	List<CategorieProduit> retrieveAllCategorieProduits();
 
-	CategorieProduit addCategorieProduit(CategorieProduit cp);
+	CategorieProduit addCategorieProduit(CategorieProduit cprod);
 
 	void deleteCategorieProduit(Long id);
 
