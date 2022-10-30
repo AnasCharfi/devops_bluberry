@@ -42,6 +42,7 @@
 <ul>
     <li>docker images</li>
     <li>docker ps</li>
+    <li>docker container ls</li>
     <li>docker images show</li>
     <li>docker rmi [imageID]</li>
     <li>docker rm $(docker ps -a -q) <em>#Be carefull this command will delete all of your containers</em></li>
