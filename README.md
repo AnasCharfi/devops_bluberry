@@ -1,7 +1,18 @@
 # devops_bluberry
 ## Welcome to BluBerry DevOps project
 
- #### Below you'll find commands and instructions to run the project
+### Stack
+<ul >
+<li>Docker</li>
+<li>Docker-Compose</li>
+<li>Java</li>
+<li>Spring Boot</li>
+<li>MySQL</li>
+<li>Tomcat</li>
+<li>Maven</li>
+</ul>
+
+#### Below you'll find commands and instructions to run the project
 <ol>
     <li>Start <strong>vagrant</strong> in powershell: 
         <ul>
