@@ -39,11 +39,17 @@
             <li><strong>now open your browser, type in ###:9000</strong></li>
         </ul>
     </li>    
-        <li>Start <strong>Nexus3</strong> in <em>vagrant</em> on <em>Docker</em>: 
+    <li>Start <strong>Nexus3</strong> in <em>vagrant</em> on <em>Docker</em>: 
         <ul>
             <li>docker start 7a51bb825e1a [NexusContainerID] <strong>| First run do this => docker run -d -p 8081:8081 sonatype/nexus3</strong><br><em> #It will take some time (quiet much) don't worry</em></li>
             <li>now open your browser, type in ###:8081 <strong>| First run do this =>docker exec -i  cat /nexus-data/admin.password</strong><em> #Now get the password by typing this command</em>
             </li>
+        </ul>
+    </li>   
+    <li>Start <strong>MySQL</strong> in <em>vagrant</em> on <em>Docker</em>: 
+        <ul>
+            <li>docker start 6eac0b8899c9 [MySQLContainerID]</li>
+            <li>docker exec -t -i mysql /bin/bash -c "mysql -uroot -proot" <strong> | To get into shell</strong></li>
         </ul>
     </li>    
 
@@ -81,4 +87,6 @@
 <li>7a51bb825e1a  nexus3</li>
 <li>docker exec -i 7a51bb825e1a cat  /nexus-data/admin.password</li>
 <li>2eb545aeeab8  sonar</li>
+<li>6eac0b8899c9 mysql</li>
 </ul>
+
