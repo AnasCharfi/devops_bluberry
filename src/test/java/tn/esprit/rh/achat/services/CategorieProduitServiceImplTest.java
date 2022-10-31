@@ -69,4 +69,30 @@ class CategorieProduitServiceImplTest {
         assertNull(categorieProduitService.retrieveCategorieProduit(idToBeDeleted));
     }
 
+    @Test
+    @Order(4)
+    void testRetrieveCategorieProduitById(){
+        CategorieProduit cat = new CategorieProduit();
+        String s = "Test Libelle";
+        cat.setLibelleCategorie(s);
+        cat.setCodeCategorie("Test Code");
+        CategorieProduit savedCat = categorieProduitService.addCategorieProduit(cat);
+        CategorieProduit c = categorieProduitService.retrieveCategorieProduit(savedCat.getIdCategorieProduit());
+        assertEquals(s,c.getLibelleCategorie());
+        categorieProduitService.deleteCategorieProduit(savedCat.getIdCategorieProduit());
+    }
+
+    @Test
+    @Order(5)
+    void testRetrieveAllCategorieProduit(){
+        int expected = categorieProduitService.retrieveAllCategorieProduits().size();
+        CategorieProduit cat = new CategorieProduit();
+        cat.setLibelleCategorie("Test Libelle");
+        cat.setCodeCategorie("Test Code");
+        CategorieProduit catSaved = categorieProduitService.addCategorieProduit(cat);
+        int x = categorieProduitService.retrieveAllCategorieProduits().size();
+        assertNotEquals(expected,x);
+        categorieProduitService.deleteCategorieProduit(catSaved.getIdCategorieProduit());
+    }
+
 }
