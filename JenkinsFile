@@ -1,0 +1,35 @@
+pipeline {
+    agent any
+
+    tools{
+        maven 'Maven'
+    }
+    stages {
+        stage('Pulling Project from Git branch Dahmani') {
+            steps {
+                echo 'Pulling ...';
+                // Get some code from a GitHub repository
+                git 'https://github.com/AnasCharfi/devops_bluberry.git', branch : 'dahmani'
+
+            }
+        }
+        stage('Cleaning the project'){
+            steps{
+                echo 'Cleaning Project ...'
+                echo 'Maven Version'
+                sh 'mvn -version'
+            }
+        }
+        stage('Artifact construction'){
+            steps{
+                echo 'Maven build'
+            }
+
+        }
+        stage('Unit Tests'){
+            steps{
+                echo 'Unit Tests ...'
+            }
+        }
+    }
+}
