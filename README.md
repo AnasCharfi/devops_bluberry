@@ -87,8 +87,9 @@
 <li>7a51bb825e1a  nexus3</li>
 <li>docker exec -i 7a51bb825e1a cat  /nexus-data/admin.password</li>
 <li>2eb545aeeab8  sonar</li>
-<li>e5e09440c028 mysql</li>
+<li>b4ec096f3c19 mysql  --name mysqldb</li>
 <li>network achat-mysql</li>
+<li>achat-jdbc --name of container of spring project (coming from git)</li>
 <li>docker container logs -f e5e</li>
 <li>docker container exec -it e5e bash</li>
 </ul>
