@@ -15,11 +15,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 import tn.esprit.rh.achat.entities.Facture;
 import tn.esprit.rh.achat.services.IFactureService;
 
-
-
+/*
+@SpringBootTest
+@TestMethodOrder(OrderAnnotation.class)*/
 class FactureServiceImplTest {
 
-	
+	/*
 	@Autowired
 	IFactureService factureService;
 
@@ -32,5 +33,5 @@ class FactureServiceImplTest {
 		Facture f = factureService.addFacture(Facture.builder().montantFacture(1000).montantRemise(200).build());
 		assertEquals(expected + 1, factureService.retrieveAllFactures().size());
 		assertNotNull(f.getIdFacture());
-	}
+	}*/
 }
