@@ -4,12 +4,14 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
+import org.springframework.test.context.web.WebAppConfiguration;
 import tn.esprit.rh.achat.entities.Operateur;
 import tn.esprit.rh.achat.repositories.OperateurRepository;
 import tn.esprit.rh.achat.services.IOperateurService;
 import lombok.Builder;
 
 @SpringBootTest
+@WebAppConfiguration
 class OperateurServiceImplTest {
 
     @Autowired
@@ -56,5 +58,4 @@ class OperateurServiceImplTest {
          Operateur ou= OprateurServiceImpl.updateOperateur(o);
         Assertions.assertNotNull(ou);
     }
-
 }
