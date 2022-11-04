@@ -16,8 +16,7 @@ import tn.esprit.rh.achat.entities.Facture;
 import tn.esprit.rh.achat.services.IFactureService;
 
 
-@SpringBootTest
-@TestMethodOrder(OrderAnnotation.class)
+
 class FactureServiceImplTest {
 
 	
