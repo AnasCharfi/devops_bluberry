@@ -10,7 +10,6 @@ import tn.esprit.rh.achat.services.IOperateurService;
 import lombok.Builder;
 
 @SpringBootTest
-@Builder
 class OperateurServiceImplTest {
 
     @Autowired
@@ -35,7 +34,7 @@ class OperateurServiceImplTest {
 
     @Test
     void TestdeleteOperateur(){
-        long id=2;
+        long id=4;
         int listOperateurs = OprateurServiceImpl.retrieveAllOperateurs().size();
         OprateurServiceImpl.deleteOperateur(id);
         Assertions.assertEquals(listOperateurs-1,OprateurServiceImpl.retrieveAllOperateurs().size());
