@@ -14,12 +14,13 @@ import org.springframework.util.Assert;
 import tn.esprit.rh.achat.entities.Operateur;
 import tn.esprit.rh.achat.repositories.OperateurRepository;
 import tn.esprit.rh.achat.services.OperateurServiceImpl;
-
+import lombok.Builder;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 @SpringBootTest
+@Builder
 @ExtendWith(MockitoExtension.class)
 public class OperateurServiceImplMock {
     @Mock

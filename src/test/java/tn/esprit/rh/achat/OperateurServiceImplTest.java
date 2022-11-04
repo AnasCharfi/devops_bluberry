@@ -7,8 +7,10 @@ import org.springframework.test.annotation.Rollback;
 import tn.esprit.rh.achat.entities.Operateur;
 import tn.esprit.rh.achat.repositories.OperateurRepository;
 import tn.esprit.rh.achat.services.IOperateurService;
+import lombok.Builder;
 
 @SpringBootTest
+@Builder
 class OperateurServiceImplTest {
 
     @Autowired
