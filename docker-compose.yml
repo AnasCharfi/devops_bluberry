@@ -1,7 +1,7 @@
 version: "3"
 services:
   achat-jdbc:
-    image: achat-jdbc
+    image: anascharfi/achat-jdbc
     ports:
       - "8089:8089"
     networks:

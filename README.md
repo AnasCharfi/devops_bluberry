@@ -48,7 +48,7 @@
     </li>   
     <li>Start <strong>MySQL</strong> in <em>vagrant</em> on <em>Docker</em>: 
         <ul>
-            <li>docker start 6eac0b8899c9 [MySQLContainerID]</li>
+            <li>docker start ee73c4241181 [MySQLContainerID]</li>
             <li>docker exec -t -i mysql /bin/bash -c "mysql -uroot -proot" <strong> | To get into shell</strong></li>
         </ul>
     </li>    
