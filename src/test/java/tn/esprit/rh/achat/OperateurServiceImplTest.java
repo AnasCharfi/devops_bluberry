@@ -1,4 +1,4 @@
-/*package tn.esprit.rh.achat;
+package tn.esprit.rh.achat;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +34,7 @@ class OperateurServiceImplTest {
 
     @Test
     void TestdeleteOperateur() {
-        long id = 4;
+        long id = 5;
         int listOperateurs = OprateurServiceImpl.retrieveAllOperateurs().size();
         OprateurServiceImpl.deleteOperateur(id);
         Assertions.assertEquals(listOperateurs - 1, OprateurServiceImpl.retrieveAllOperateurs().size());
@@ -43,7 +43,7 @@ class OperateurServiceImplTest {
     @Test
     @Rollback(false)
     void TestRetrieveOperateur() {
-        long id = 4;
+        long id = 5;
         Operateur o = OprateurServiceImpl.retrieveOperateur(id);
         Assertions.assertNotNull(o);
     }
@@ -57,4 +57,4 @@ class OperateurServiceImplTest {
         Assertions.assertNotNull(ou);
     }
 
-}*/
+}
