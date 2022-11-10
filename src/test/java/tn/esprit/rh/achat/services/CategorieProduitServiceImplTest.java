@@ -13,11 +13,11 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-//@SpringBootTest
+@SpringBootTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @Slf4j
 class CategorieProduitServiceImplTest {
-
+/*
     @Autowired
     ICategorieProduitService categorieProduitService;
 
@@ -94,5 +94,5 @@ class CategorieProduitServiceImplTest {
         assertNotEquals(expected,x);
         categorieProduitService.deleteCategorieProduit(catSaved.getIdCategorieProduit());
     }
-
+*/
 }
