@@ -22,16 +22,16 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 
-@SpringBootTest//(classes=StockTest.class)
+@SpringBootTest(classes=StockTest.class)
 @RunWith(SpringRunner.class)
 @Slf4j
-//@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 //@ContextConfiguration( loader= AnnotationConfigContextLoader.class)
 public class StockTest {
 
     @Autowired
     IStockService stockService;
-/*
+
     @Test
     @Order(1)
     public  void testAddStock(){
@@ -123,6 +123,6 @@ public class StockTest {
         assertNotNull(stocks.size());
     }
 
-    */
+
 
 }
