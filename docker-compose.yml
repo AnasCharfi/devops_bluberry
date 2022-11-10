@@ -1,0 +1,21 @@
+version: "3"
+services:
+  achat-spring-jdbc:
+    image: achat-spring-jdbc
+    ports:
+      - "8089:8089"
+    networks:
+      - spring-mysql
+    depends_on:
+      - sqlachatdb
+
+  sqlachatdb:
+    image: mysql:5
+    networks:
+      - spring-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=root
+
+networks:
+  spring-mysql:
