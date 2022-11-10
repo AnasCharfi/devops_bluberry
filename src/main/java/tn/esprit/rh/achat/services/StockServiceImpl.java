@@ -3,6 +3,7 @@ package tn.esprit.rh.achat.services;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import tn.esprit.rh.achat.entities.Stock;
 import tn.esprit.rh.achat.repositories.StockRepository;
@@ -13,6 +14,7 @@ import java.util.List;
 
 @Service
 @Slf4j
+@Component
 public class StockServiceImpl implements IStockService {
 
 	@Autowired(required=true)

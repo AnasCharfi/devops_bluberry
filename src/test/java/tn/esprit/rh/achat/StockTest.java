@@ -42,7 +42,7 @@ public class StockTest {
         Stock savedStock= stockService.addStock(s);
         assertEquals(x, stockService.retrieveAllStocks().size());
         assertNotNull(savedStock.getLibelleStock());
-       stockService.deleteStock(savedStock.getIdStock());
+       //stockService.deleteStock(savedStock.getIdStock());
     }
 
     @Test
