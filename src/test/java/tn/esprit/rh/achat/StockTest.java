@@ -23,7 +23,7 @@ import static org.junit.Assert.*;
 @RunWith(SpringRunner.class)
 @Slf4j
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-@ContextConfiguration
+//@ContextConfiguration
 public class StockTest {
 
     @Autowired
