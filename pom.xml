@@ -70,6 +70,12 @@
 			<artifactId>modelmapper</artifactId>
 			<version>3.0.0</version>
 		</dependency>
+		<dependency>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-surefire-plugin</artifactId>
+  <version>3.0.0-M7</version>
+  <type>maven-plugin</type>
+</dependency>
 
 	</dependencies>
 
@@ -87,25 +93,45 @@
 					</excludes>
 				</configuration>
 			</plugin>
+<<<<<<< HEAD
 			<plugin>
+=======
+				<plugin>
+>>>>>>> 022ec66d64e4ddfea62fd042e2cebb0d4cde8901
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
 				<version>3.1.0</version>
 			</plugin>
+<<<<<<< HEAD
 
 			<plugin>
+=======
+	                <plugin>
+>>>>>>> 022ec66d64e4ddfea62fd042e2cebb0d4cde8901
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.19.1</version>
 				<configuration>
 					<includes>
+<<<<<<< HEAD
 						<include>**/StockTest.java</include>
+=======
+						<include>**/StockTestImpl.java</include>
+>>>>>>> 022ec66d64e4ddfea62fd042e2cebb0d4cde8901
 					</includes>
 				</configuration>
 			</plugin>
 
 		</plugins>
 	</build>
+	<distributionManagement>
+      <repository>
+        <id>deploymentRepo</id>
+	    <name>Nexus Repository</name>
+        <url>http://192.168.33.10:8081/repository/maven-releases/</url>
+
+    </repository>
+</distributionManagement>
 
 
 
