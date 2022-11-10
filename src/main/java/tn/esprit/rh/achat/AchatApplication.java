@@ -8,8 +8,8 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @EnableScheduling
 @SpringBootApplication(scanBasePackages = {"tn.esprit.rh.achat"})
-@EnableJpaRepositories("tn.esprit.rh.achat.repositories")
-@ComponentScan
+//@EnableJpaRepositories("tn.esprit.rh.achat.repositories")
+//@ComponentScan
 public class AchatApplication {
 
     public static void main(String[] args) {
