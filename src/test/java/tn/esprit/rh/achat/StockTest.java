@@ -12,6 +12,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
 
+import org.springframework.test.context.support.AnnotationConfigContextLoader;
 import tn.esprit.rh.achat.entities.Stock;
 import tn.esprit.rh.achat.services.IStockService;
 import java.util.List;
@@ -23,7 +24,7 @@ import static org.junit.Assert.*;
 @RunWith(SpringRunner.class)
 @Slf4j
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-//@ContextConfiguration
+@ContextConfiguration( loader= AnnotationConfigContextLoader.class)
 public class StockTest {
 
     @Autowired
