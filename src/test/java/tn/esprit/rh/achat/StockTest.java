@@ -25,7 +25,7 @@ import static org.junit.Assert.*;
 @SpringBootTest//(classes=StockTest.class)
 @RunWith(SpringRunner.class)
 @Slf4j
-@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+//@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 //@ContextConfiguration( loader= AnnotationConfigContextLoader.class)
 public class StockTest {
 
