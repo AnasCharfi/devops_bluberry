@@ -28,7 +28,7 @@ public class StockTest {
     IStockService stockService;
 
     @Test
-    @Order(2)
+    @Order(1)
     public  void testAddStock(){
         List<Stock> stocks = stockService.retrieveAllStocks();
         int expected=stocks.size();
@@ -44,7 +44,7 @@ public class StockTest {
     }
 
     @Test
-    @Order(6)
+    @Order(1)
     public  void testUpdateStock()  {
         List<Stock> stocks = stockService.retrieveAllStocks();
         if (stocks.isEmpty())
@@ -66,7 +66,7 @@ public class StockTest {
 
 
     @Test
-    @Order(3)
+    @Order(6)
     public void testDeleteStock() {
 
         List<Stock> stocks = stockService.retrieveAllStocks();
@@ -83,7 +83,7 @@ public class StockTest {
     }
 
     @Test
-    @Order(4)
+    @Order(3)
     public void testRetreiveStock() {
         Stock s1 =stockService.retrieveStock((long)42);
         assertEquals("stock test",s1.getLibelleStock() );
@@ -93,7 +93,7 @@ public class StockTest {
 
 
     @Test
-    @Order(5)
+    @Order(4)
     public void testRetreiveStatusStock() {
 
         List<Stock> stocks = stockService.retrieveAllStocks();
@@ -112,7 +112,7 @@ public class StockTest {
         }
     }
     @Test
-    @Order(1)
+    @Order(5)
     public void testRetreiveAllStock() {
         List<Stock> stocks = stockService.retrieveAllStocks();
         assertNotNull(stocks.size());
