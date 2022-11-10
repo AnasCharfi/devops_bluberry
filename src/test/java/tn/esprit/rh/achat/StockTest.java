@@ -22,7 +22,7 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 
-@SpringBootTest(classes=StockTest.class)
+@SpringBootTest//(classes=StockTest.class)
 @RunWith(SpringRunner.class)
 @Slf4j
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
