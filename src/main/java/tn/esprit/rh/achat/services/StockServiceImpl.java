@@ -2,6 +2,7 @@ package tn.esprit.rh.achat.services;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import tn.esprit.rh.achat.entities.Stock;
 import tn.esprit.rh.achat.repositories.StockRepository;
@@ -30,7 +31,7 @@ public class StockServiceImpl implements IStockService {
 	}
 
 	@Override
-	public Stock addStock(Stock s) {
+	public Stock addStock(@Qualifier("Stock") Stock s) {
 		log.info("In method addStock");
 		return stockRepository.save(s);
 		
@@ -44,7 +45,7 @@ public class StockServiceImpl implements IStockService {
 	}
 
 	@Override
-	public Stock updateStock(Stock s) {
+	public Stock updateStock(@Qualifier("Stock") Stock s) {
 		log.info("In method updateStock");
 		return stockRepository.save(s);
 	}
