@@ -16,6 +16,9 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=root
+      - MYSQL_DATABASE=achatdb
+    ports:
+      - 3307:3306
 
 networks:
   spring-mysql:
