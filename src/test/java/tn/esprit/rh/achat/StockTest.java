@@ -1,7 +1,10 @@
-package tn.esprit.rh.achat.test;
+package tn.esprit.rh.achat;
 import lombok.extern.slf4j.Slf4j;
 
 import org.junit.Test;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,15 +18,17 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 
+@SpringBootTest
 @RunWith(SpringRunner.class)
 @Slf4j
-@SpringBootTest
-public class StockTestImpl {
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+public class StockTest {
 
     @Autowired
     IStockService stockService;
 
     @Test
+    @Order(2)
     public  void testAddStock(){
         List<Stock> stocks = stockService.retrieveAllStocks();
         int expected=stocks.size();
@@ -39,6 +44,7 @@ public class StockTestImpl {
     }
 
     @Test
+    @Order(6)
     public  void testUpdateStock()  {
         List<Stock> stocks = stockService.retrieveAllStocks();
         if (stocks.isEmpty())
@@ -60,6 +66,7 @@ public class StockTestImpl {
 
 
     @Test
+    @Order(3)
     public void testDeleteStock() {
 
         List<Stock> stocks = stockService.retrieveAllStocks();
@@ -75,8 +82,18 @@ public class StockTestImpl {
         assertEquals(x, stockService.retrieveAllStocks().size());
     }
 
+    @Test
+    @Order(4)
+    public void testRetreiveStock() {
+        Stock s1 =stockService.retrieveStock((long)42);
+        assertEquals("stock test",s1.getLibelleStock() );
+        assertEquals(10, s1.getQte().intValue() );
+        assertEquals(100, s1.getQteMin().intValue() );
+    }
+
 
     @Test
+    @Order(5)
     public void testRetreiveStatusStock() {
 
         List<Stock> stocks = stockService.retrieveAllStocks();
@@ -85,7 +102,19 @@ public class StockTestImpl {
             log.info("Fct test Delete stock : Stock Vide");
 
         }else {
-            log.info(stockService.retrieveStatusStock());
+            int x = stocks.size();
+            Stock s = new Stock();
+            s.setLibelleStock("stock test");
+            s.setQte(10);
+            s.setQteMin(100);
+            Stock savedStock= stockService.addStock(s);
+            assertEquals(x+1, stockService.retrieveAllStocks().size());
         }
+    }
+    @Test
+    @Order(1)
+    public void testRetreiveAllStock() {
+        List<Stock> stocks = stockService.retrieveAllStocks();
+        assertNotNull(stocks.size());
     }
 }
