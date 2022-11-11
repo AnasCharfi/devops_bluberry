@@ -18,7 +18,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import tn.esprit.rh.achat.entities.Produit;
 import tn.esprit.rh.achat.repositories.ProduitRepository;
 
-
+@SpringBootTest
 @ExtendWith(MockitoExtension.class)
 public class ProduitServiceImplMock {
 	@Mock
