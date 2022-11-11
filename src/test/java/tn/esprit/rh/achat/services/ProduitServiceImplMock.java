@@ -19,7 +19,7 @@ import tn.esprit.rh.achat.repositories.ProduitRepository;
 
 @SpringBootTest
 @ExtendWith(MockitoExtension.class)
-public class ProduitServiceMockTest {
+public class ProduitServiceImplMock {
 	@Mock
     ProduitRepository produitRepository;
 
@@ -36,7 +36,7 @@ public class ProduitServiceMockTest {
     };
 
     @Test
-    void retrieveAllProduit()
+    public void retrieveProduit()
     {
         Mockito.when(produitRepository.findById(Mockito.anyLong())).thenReturn(Optional.of(produit));
         Produit produit1 = produitService.retrieveProduit(Long.valueOf(1));
