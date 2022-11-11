@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @Slf4j
 class CategorieProduitServiceImplTest {
-/*
+
     @Autowired
     ICategorieProduitService categorieProduitService;
 
@@ -94,5 +94,5 @@ class CategorieProduitServiceImplTest {
         assertNotEquals(expected,x);
         categorieProduitService.deleteCategorieProduit(catSaved.getIdCategorieProduit());
     }
-*/
+
 }
