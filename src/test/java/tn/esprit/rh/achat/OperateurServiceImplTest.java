@@ -31,15 +31,15 @@ class OperateurServiceImplTest {
                 .password("PWD5").build());
         Assertions.assertEquals(listOperateurs + 1, OprateurServiceImpl.retrieveAllOperateurs().size());
     }
-
+/*
     @Test
     void TestdeleteOperateur() {
         long id = 5;
         int listOperateurs = OprateurServiceImpl.retrieveAllOperateurs().size();
         OprateurServiceImpl.deleteOperateur(id);
         Assertions.assertEquals(listOperateurs - 1, OprateurServiceImpl.retrieveAllOperateurs().size());
-    }
-
+    }*/
+/*
     @Test
     @Rollback(false)
     void TestRetrieveOperateur() {
@@ -47,7 +47,7 @@ class OperateurServiceImplTest {
         Operateur o = OprateurServiceImpl.retrieveOperateur(id);
         Assertions.assertNotNull(o);
     }
-
+*/
     @Test
     @Rollback(false)
     void TestUpdateOperateur() {
