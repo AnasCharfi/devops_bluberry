@@ -19,7 +19,6 @@ import static org.junit.Assert.*;
 
 
 @SpringBootTest
-//@RunWith(SpringRunner.class)
 @Slf4j
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class StockTest {
