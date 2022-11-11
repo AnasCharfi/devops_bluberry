@@ -106,8 +106,8 @@
 				<version>2.22.1</version>
 				<configuration>
 					<includes>
-						<useSystemClassLoader>false</useSystemClassLoader>
-						<!--<include>**/StockTest.java</include> -->
+						<include>**/StockTest.java</include>
+						<include>**/StockMockitoTest.java</include>
 					</includes>
 				</configuration>
 			</plugin>
