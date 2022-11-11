@@ -36,7 +36,7 @@ public class ProduitServiceMockTest {
     };
 
     @Test
-    void retrieveAllCategorieProduit()
+    void retrieveAllProduit()
     {
         Mockito.when(produitRepository.findById(Mockito.anyLong())).thenReturn(Optional.of(produit));
         Produit produit1 = produitService.retrieveProduit(Long.valueOf(1));
