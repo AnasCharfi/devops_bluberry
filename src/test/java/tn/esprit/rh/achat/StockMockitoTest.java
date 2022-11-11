@@ -1,5 +1,5 @@
 package tn.esprit.rh.achat;
-import static org.junit.Assert.assertEquals;
+
 import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
@@ -7,7 +7,7 @@ import static org.mockito.Mockito.when;
 import static org.junit.Assert.*;
 
 import lombok.extern.slf4j.Slf4j;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 import org.mockito.InjectMocks;
@@ -24,7 +24,7 @@ import java.util.List;
 import java.util.Optional;
 
 //@RunWith(MockitoJUnitRunner.class)
-@SpringBootTest
+//@SpringBootTest
 @Slf4j
 @ExtendWith(MockitoExtension.class)
 public class StockMockitoTest {
