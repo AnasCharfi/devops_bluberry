@@ -102,7 +102,7 @@
 			</plugin>
 			<!--<plugin>
 					<artifactId>maven-surefire-plugin</artifactId>
-                    <!-- latest version (2.20.1) does not work well with JUnit5
+                     latest version (2.20.1) does not work well with JUnit5
 				<version>2.19.1</version>
 				<configuration>
 				<includes>
