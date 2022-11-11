@@ -34,7 +34,7 @@ class OperateurServiceImplTest {
 
     @Test
     void TestdeleteOperateur() {
-        long id = 5;
+        long id = 13;
         int listOperateurs = OprateurServiceImpl.retrieveAllOperateurs().size();
         OprateurServiceImpl.deleteOperateur(id);
         Assertions.assertEquals(listOperateurs - 1, OprateurServiceImpl.retrieveAllOperateurs().size());
@@ -43,7 +43,7 @@ class OperateurServiceImplTest {
     @Test
     @Rollback(false)
     void TestRetrieveOperateur() {
-        long id = 5;
+        long id = 13;
         Operateur o = OprateurServiceImpl.retrieveOperateur(id);
         Assertions.assertNotNull(o);
     }
