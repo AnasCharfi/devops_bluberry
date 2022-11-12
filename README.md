@@ -1,8 +1,8 @@
 # devops_bluberry
 ## Welcome to BluBerry DevOps project
 
-### Stack
-<ul >
+### Stack on <em>Vagrant</em>
+<ul>
 <li>Docker</li>
 <li>Docker-Compose</li>
 <li>Java</li>
