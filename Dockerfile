@@ -1,4 +1,4 @@
-FROM openjdk:12-alpine
-WORKDIR opt/thouraya
-COPY ./target/achat-1.0.jar achat-1.0.jar
-CMD ["java","-jar","achat-1.0.jar"]
+FROM openjdk:8
+EXPOSE 8082
+COPY target/achat.jar achat.jar
+CMD ["java","-jar","/achat.jar"]
