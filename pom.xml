@@ -81,6 +81,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>achat1.0</finalName>
 	</build>
 
 </project>
