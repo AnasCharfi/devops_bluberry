@@ -2,26 +2,20 @@ version: "3"
 services:
 
   sqlachatdb:
-    image: mysql:5
-    networks:
-      - spring-mysql
+    image: mysql
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_USER=root
       - MYSQL_DATABASE=achatdb
       - MYSQL_PASSWORD=root
     ports:
-      - 3307:3306
+      - 3306:3306
 
-  achat-spring-jdbc:
-    image: achat-spring-jdbc
+  achat-spring:
+    image: achat-spring
     ports:
       - "8089:8089"
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://sqlachatdb:3306/achatdb?autoReconnect=true&useSSL=false
-    networks:
-      - spring-mysql
+      SPRING_DATASOURCE_URL: jdbc:mysql://localhost:3306/achatdb?autoReconnect=true&useSSL=false
     depends_on:
       - sqlachatdb
-networks:
-  spring-mysql:
