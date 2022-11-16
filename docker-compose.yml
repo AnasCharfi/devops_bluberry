@@ -1,15 +1,6 @@
 version: "3"
 services:
 
-  sqlachatdb:
-    image: mysql
-    container_name: mysqlcontainer
-    environment:
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=achatdb
-    ports:
-      - 3306:3306
-
   achat-spring:
     image: achat-spring
     container_name: achat-spring
