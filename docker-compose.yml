@@ -3,19 +3,26 @@ services:
 
   sqlachatdb:
     image: mysql
+    container_name: mysqlcontainer
     environment:
       - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_USER=root
       - MYSQL_DATABASE=achatdb
-      - MYSQL_PASSWORD=root
     ports:
       - 3306:3306
 
   achat-spring:
     image: achat-spring
+    container_name: achat-spring
     ports:
-      - "8089:8089"
+      - 8089:8089
+    restart: on-failure
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://localhost:3306/achatdb?autoReconnect=true&useSSL=false
+      SPRING_APPLICATION_JSON: '{
+                  "spring.datasource.url"  : "jdbc:mysql://mysql:3306/achatdb?useSSL=false",
+                  "spring.datasource.username" : "root",
+                  "spring.datasource.password" : "root",
+                  "spring.jpa.properties.hibernate.dialect" : "org.hibernate.dialect.MySQL5InnoDBDialect",
+                  "spring.jpa.hibernate.ddl-auto" : "update"
+      }'
     depends_on:
       - sqlachatdb
