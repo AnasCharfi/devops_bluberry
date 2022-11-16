@@ -15,5 +15,3 @@ services:
                   "spring.jpa.properties.hibernate.dialect" : "org.hibernate.dialect.MySQL5InnoDBDialect",
                   "spring.jpa.hibernate.ddl-auto" : "update"
       }'
-    depends_on:
-      - sqlachatdb
