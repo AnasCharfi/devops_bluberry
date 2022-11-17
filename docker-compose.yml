@@ -16,3 +16,11 @@ services:
             "spring.jpa.properties.hibernate.dialect" : "org.hibernate.dialect.MySQL5InnoDBDialect",
             "spring.jpa.hibernate.ddl-auto" : "update"
           }'
+       
+  angular:
+    image: maryemkhechine/angular
+    container_name: angular-devops
+    ports:
+      - 88:88
+    depends_on:
+      - spring-boot
